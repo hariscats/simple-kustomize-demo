@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - ../base
+
+namespace: common-namespace
+nameSuffix: -prod
+
+commonLabels:
+  env: prod
+
+commonAnnotations:
+  description: "Production environment"
+  maintainer: "prod-team@example.com"
+
+patchesStrategicMerge:
+  - patch-prod-replicas.yaml
+  - patch-prod-tolerations.yaml

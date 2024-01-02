@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - ../base
+
+namespace: common-namespace
+nameSuffix: -dev
+
+commonLabels:
+  env: dev
+
+commonAnnotations:
+  description: "Development environment"
+  maintainer: "dev-team@example.com"
