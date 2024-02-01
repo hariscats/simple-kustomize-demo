@@ -52,3 +52,6 @@ The production environment overlay includes different labels, annotations, and c
 
 ## Customization
 You can customize the base and overlays by editing the respective `kustomization.yaml` and resource files. For example, you can change the image tags, resource limits, or add new resources in the base or overlays.
+
+## Further Info
+Check out the blog post here for more details: 
